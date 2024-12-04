@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dynamic Gallery</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="gallery-container">
+    <h1>Dynamic Gallery</h1>
+    <p>Upload your Images!</p>
+    <form id="upload-form">
+      <input type="file" id="image-input" accept="image/*" multiple>
+      <button type="submit">Upload images</button>
+    </form>
+    <button id="delete-all" style="display: none;">Delete all</button>
+    <div id="gallery"></div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
