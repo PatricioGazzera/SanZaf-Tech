@@ -10,10 +10,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
 let tasks = [];
 
+// Store tasks function
 const saveTasks = () => {
     localStorage.setItem('tasks', JSON.stringify(tasks));
 }
 
+// Function for add task
 const addTask = () => {
     const taskInput = document.getElementById('taskInput')
     const text = taskInput.value.trim()
@@ -27,6 +29,7 @@ const addTask = () => {
     }
 }
 
+// Complete tasks function
 const toggleTaskComplete = (index) => {
     tasks[index].completed = !tasks[index].completed
     updateTaskList();
@@ -34,6 +37,7 @@ const toggleTaskComplete = (index) => {
     saveTasks();
 }
 
+//Delete task function
 const deleteTask = (index) => {
     tasks.splice(index,1);
     updateTaskList();
@@ -41,6 +45,7 @@ const deleteTask = (index) => {
     saveTasks();
 }
 
+// Edit tasks function
 const editTask = (index) => {
     const taskInput = document.getElementById('taskInput');
     taskInput.value = tasks[index].text;
@@ -51,6 +56,7 @@ const editTask = (index) => {
     saveTasks();
 }
 
+// Update tasks function
 const updateStats = () => {
     const completeTasks = tasks.filter(task => task.completed).length
     const totalTasks = tasks.length;
@@ -63,6 +69,7 @@ const updateStats = () => {
 
 }
 
+// Update task list function
 const updateTaskList = () => {
     const taskList = document.getElementById("task-list")
     taskList.innerHTML = "";

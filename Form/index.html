@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form with Validation</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="form-container">
+    <h1>Validation Form</h1>
+    <form id="validation-form" novalidate>
+      <div class="form-group">
+        <label for="name">Name:</label>
+        <input type="text" id="name" placeholder="Ingresa tu nombre">
+        <small class="error-message">The name must be at least 3 characters.</small>
+      </div>
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" id="email" placeholder="Ingresa tu correo">
+        <small class="error-message">Enter a valid Email.</small>
+      </div>
+      <div class="form-group">
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" placeholder="Ingresa tu número de teléfono">
+        <small class="error-message">The pohne number must be between 10 and 15 digits.</small>
+      </div>
+      <button type="submit" id="submit-button" disabled>Submit</button>
+    </form>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
